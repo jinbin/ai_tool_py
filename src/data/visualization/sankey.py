@@ -43,7 +43,7 @@ pic = (
          node_gap = 30,
     ).set_global_opts(title_opts=opts.TitleOpts(title = '熬夜原因桑基图'))
 )
-# pic.render('test.html')
+pic.render('sankey.html')
 
 
 
