@@ -42,6 +42,7 @@ def writeToFile(type):
 def setClip (text):
     pb = NSPasteboard.generalPasteboard()
     pb.clearContents()
+    # TODO 如果传入图片
     a = NSArray.arrayWithObject_(text)
     return pb.writeObjects_(a)
 
