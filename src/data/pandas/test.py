@@ -4,7 +4,7 @@ from src.utils.utils import utils
 
 print(pd.__version__)
 
-file = utils.getDataDir("/pd_csv.csv")
+file = utils.getDataDir("/pandas/pd_csv.csv")
 
 print("******\n")
 csv_data = pd.read_csv(file)
