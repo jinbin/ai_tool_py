@@ -18,14 +18,14 @@ print(df["预测行业"].value_counts())
 
 # 筛选出曝光点击率 > 0.3的查询词
 df["曝光点击率"] = df["曝光点击率"].str.strip('%').astype(float)/100
-print(df["曝光点击率"])
-print(df[df["曝光点击率"] > 0.3])
+# print(df["曝光点击率"])
+# print(df[df["曝光点击率"] > 0.3])
 
 # 计算搜索词的平均uv
-print(df["搜索uv"].mean())
+# print(df["搜索uv"].mean())
 
-print(df["曝光点击率"])
-df[df["曝光点击率"]].plot()
+print(df[df["曝光点击率"] > 0.3])
+df[df["曝光点击率"] > 0.3].plot()
 plt.show()
 
 df = df.rename(columns={"搜索uv": "search uv", "搜索pv": "search pv"})
@@ -34,7 +34,7 @@ ax = df.plot.scatter(x="search uv",
                 y="search pv",
                 color='b',
                 label='搜索 uv / pv')
-plt.show()
+# plt.show()
 
 # 如何解决中文无法展示的问题： https://blog.csdn.net/sinat_40875078/article/details/104326625
 
@@ -45,7 +45,7 @@ df.plot.scatter(x="曝光uv",
                 y="曝光pv",
                 color='g',
                 label="曝光 uv / pv", ax=ax)
-plt.show()
+# plt.show()
 
 # 除了蔡徐坤遥遥领先，其他搜索uv量均在0-100区间，uv跟pv的比例也基本成正比
 
